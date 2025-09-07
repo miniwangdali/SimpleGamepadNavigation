@@ -25,9 +25,11 @@ export default defineConfig({
             entry: 'src/main.ts',
             userscript: {
                 name: 'Simple Gamepad Navigation',
-                icon: 'https://vitejs.dev/logo.svg',
+                description: 'Navigate (almost) any accessible website with a controller.',
+                icon: 'https://raw.githubusercontent.com/miniwangdali/SimpleGamepadNavigation/refs/heads/main/packages/monkey-script/asset/icon.svg',
                 namespace: 'https://miniwangdali.github.io/simple-gamepad-navigation/',
                 match: ['*://*/*'],
+                license: 'MIT',
             },
         }),
     ],
