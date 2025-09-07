@@ -5,6 +5,12 @@
     "contributors": [
         "miniwangdali@gmail.com"
     ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/miniwangdali/SimpleGamepadNavigation/tree/main/packages/simple-gamepad-navigation"
+    },
+    "description": "A helper library that allows users navigate and interact with standard web pages using a gamepad.",
     "type": "module",
     "files": [
         "dist",
