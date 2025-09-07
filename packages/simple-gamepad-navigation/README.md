@@ -68,9 +68,8 @@ You will need Tampermonkey extension to test the userscript.
     ```sh
     npm install
     ```
-3. Develop inside the package. This will install a dev userscript in Tampermonkey:
+3. Run dev at root. This will install a dev userscript in Tampermonkey:
     ```sh
-    cd packages/simple-gamepad-navigation
     npm run dev
     ```
 4. Build:
