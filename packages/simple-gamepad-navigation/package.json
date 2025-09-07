@@ -1,0 +1,37 @@
+{
+    "name": "simple-gamepad-navigation",
+    "version": "0.0.1",
+    "author": "miniwangdali@gmail.com",
+    "contributors": [
+        "miniwangdali@gmail.com"
+    ],
+    "type": "module",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.umd.js"
+        }
+    },
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.35.0",
+        "@rollup/plugin-typescript": "^12.1.4",
+        "globals": "^16.3.0",
+        "tslib": "^2.8.1",
+        "typescript": "^5.9.2",
+        "vite": "^7.1.3"
+    },
+    "dependencies": {
+        "es-toolkit": "^1.39.10"
+    }
+}

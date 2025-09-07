@@ -1,0 +1,50 @@
+{
+    "name": "simple-gamepad-navigation-project",
+    "version": "0.0.0",
+    "description": "",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "npm run build:lib && npm run build:script",
+        "build:lib": "npm run build -w simple-gamepad-navigation",
+        "build:lib:watch": "npm run build:lib -- -- --watch",
+        "build:script": "npm run build -w monkey-script",
+        "dev": "concurrently --names lib,script --kill-others \"npm:build:lib:watch\" \"npm:dev:script\"",
+        "dev:script": "npm run dev -w monkey-script",
+        "prepare": "husky",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "format": "prettier . --write"
+    },
+    "author": "miniwangdali@gmail.com",
+    "contributors": [
+        "miniwangdali@gmail.com"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@eslint/compat": "^1.3.2",
+        "@eslint/js": "^9.35.0",
+        "@eslint/json": "^0.13.2",
+        "@eslint/markdown": "^7.2.0",
+        "@typescript-eslint/parser": "^8.42.0",
+        "concurrently": "^9.2.1",
+        "eslint": "^9.35.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-import-resolver-typescript": "^4.4.4",
+        "eslint-plugin-import-x": "^4.16.1",
+        "eslint-plugin-prettier": "^5.5.4",
+        "globals": "^16.3.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.6",
+        "prettier": "^3.6.2",
+        "prettier-eslint": "^16.4.2",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.42.0"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,json}": "eslint",
+        "**/*": "prettier --write --ignore-unknown"
+    }
+}

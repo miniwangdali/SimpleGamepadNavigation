@@ -1,0 +1,14 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#fff" stroke="#000" x="259.71499" y="231.57141" width="350" height="64" id="svg_1" rx="100"/>
+  <rect stroke-width="2" rx="16" id="svg_3" height="28" width="52" y="18" x="6" stroke="#000" fill="#fff"/>
+  <ellipse ry="3" rx="3" id="svg_4" cy="26" cx="44" stroke="#000" fill="#fff"/>
+  <ellipse ry="3" rx="3" id="svg_6" cy="32" cx="38" stroke="#000" fill="#fff"/>
+  <ellipse ry="3" rx="3" id="svg_7" cy="32" cx="49.36059" stroke="#000" fill="#fff"/>
+  <ellipse ry="3" rx="3" id="svg_8" cy="38" cx="44" stroke="#000" fill="#fff"/>
+  <ellipse ry="6" rx="6" id="svg_9" cy="32" cx="19" stroke="#000" fill="#fff"/>
+  <ellipse ry="4" rx="4" id="svg_10" cy="32" cx="19" stroke="#fff" fill="#000"/>
+ </g>
+
+</svg>
