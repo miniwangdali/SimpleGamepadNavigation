@@ -16,6 +16,8 @@ jobs:
               with:
                   node-version: 20
             - run: npm ci
+            - run: npm run build
+            - run: npm run lint
             # - run: npm test
 
     publish-npm:
@@ -29,5 +31,6 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - run: npm ci
             - run: npm publish
+              working-directory: packages/simple-gamepad-navigation
               env:
                   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
