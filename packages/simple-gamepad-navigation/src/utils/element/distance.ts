@@ -8,7 +8,7 @@ export const calculateDistanceOfTwoPoints = (
     return Math.sqrt(dx * dx + dy * dy);
 };
 
-const DISTANCE_BUFFER = 2; // To avoid edge cases where elements are exactly aligned
+const DISTANCE_BUFFER = 4; // To avoid edge cases where elements are exactly aligned
 
 export const getDistanceOfTwoElements = (
     sourceElementRect: DOMRect,

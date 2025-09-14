@@ -56,7 +56,7 @@ export const canScroll = (scrollContainer: HTMLElement, direction: ScrollDirecti
     return false;
 };
 
-export const isElementPositionedUnRelatedToScrollContainer = (element: Element, scrollContainer: HTMLElement) => {
+export const isElementPositionedUnrelatedToScrollContainer = (element: Element, scrollContainer: HTMLElement) => {
     let el = element as HTMLElement | null;
     let unrelatedPosition = false;
 

@@ -6,7 +6,7 @@ import { findNewInteractableElement, getInteractableElements } from './element/i
 import {
     canScroll,
     getNearestScrollContainer,
-    isElementPositionedUnRelatedToScrollContainer,
+    isElementPositionedUnrelatedToScrollContainer,
 } from './element/scrollContainer';
 import { throttledScroll } from './scroll';
 
@@ -38,7 +38,7 @@ export const focusNextInteractableElement = (current: Element, direction: Naviga
             scrollContainer &&
             nextElement &&
             canScroll(scrollContainer, scrollDirection, speed) &&
-            isElementPositionedUnRelatedToScrollContainer(nextElement, scrollContainer)
+            isElementPositionedUnrelatedToScrollContainer(nextElement, scrollContainer)
         ) {
             const originalPosition = { x: 0, y: 0 };
             throttledScroll(scrollDirection, speed, { result: false, originalPosition }, true);

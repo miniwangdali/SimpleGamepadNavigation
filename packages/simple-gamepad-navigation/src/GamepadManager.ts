@@ -22,6 +22,8 @@ export class GamepadManager {
     private initialize() {
         window.addEventListener('gamepadconnected', this.gamepadConnectedListener);
         window.addEventListener('gamepaddisconnected', this.gamepadDisconnectedListener);
+        window.addEventListener('focus', this.windowFocusedListener);
+        window.addEventListener('blur', this.windowBlurredListener);
 
         this.startPolling();
     }
@@ -44,6 +46,14 @@ export class GamepadManager {
         }
     };
 
+    private windowFocusedListener = () => {
+        this.startPolling();
+    };
+
+    private windowBlurredListener = () => {
+        this.stopPolling();
+    };
+
     private addGamepad = (gamepad: Gamepad) => {
         this.gamepads.set(gamepad.index, gamepad);
     };
@@ -57,6 +67,10 @@ export class GamepadManager {
     };
 
     private startPolling = () => {
+        if (this.pollingHandle !== null) {
+            this.stopPolling();
+        }
+
         const gamepads = navigator.getGamepads().filter((gp) => this.gamepads.has(gp?.index ?? -1)) as Gamepad[];
 
         for (const gamepad of gamepads) {
@@ -86,6 +100,8 @@ export class GamepadManager {
         this.gamepads.clear();
         this.stopPolling();
 
+        window.removeEventListener('focus', this.windowFocusedListener);
+        window.removeEventListener('blur', this.windowBlurredListener);
         window.removeEventListener('gamepadconnected', this.gamepadConnectedListener);
         window.removeEventListener('gamepaddisconnected', this.gamepadDisconnectedListener);
     }
